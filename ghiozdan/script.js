@@ -1,68 +1,73 @@
 const cardsArray = [{
     'revealed': false,
     'name': 'shell',
-    'img': 'img/blueshell.png',
+    'img': 'img/Anspitzer.png',
 },
     {
         'revealed': false,
         'name': 'star',
-        'img': 'img/star.png',
+        'img': 'img/Arbeitsheft.png',
     },
     {
         'revealed': false,
         'name': 'bobomb',
-        'img': 'img/bobomb.png',
+        'img': 'img/Bleistift.png',
     },
     {
         'revealed': false,
         'name': 'mario',
-        'img': 'img/mario.png',
+        'img': 'img/Schere.png',
     },
     {
         'revealed': false,
         'name': 'luigi',
-        'img': 'img/luigi.png',
+        'img': 'img/Buch.png',
     },
     {
         'revealed': false,
         'name': 'peach',
-        'img': 'img/peach.png',
+        'img': 'img/Buntstifte.png',
     },
     {
         'revealed': false,
         'name': '1up',
-        'img': 'img/1up.png',
+        'img': 'img/Federtasche.png',
     },
     {
         'revealed': false,
         'name': 'mushroom',
-        'img': 'img/mushroom.png',
+        'img': 'img/Filzstifte.png',
     },
     {
         'revealed': false,
         'name': 'thwomp',
-        'img': 'img/thwomp.png',
+        'img': 'img/Fuller.png',
     },
     {
         'revealed': false,
         'name': 'bulletbill',
-        'img': 'img/bulletbill.png',
+        'img': 'img/Kleber.png',
     },
     {
         'revealed': false,
         'name': 'coin',
-        'img': 'img/coin.png',
+        'img': 'img/Lineal.png',
     },
     {
         'revealed': false,
         'name': 'goomba',
-        'img': 'img/goomba.png',
+        'img': 'img/Pinsel.png',
+    },
+    {
+        'revealed': false,
+        'name': 'goomba',
+        'img': 'img/Radiergummi.png',
     },
 ];
 
 function initGame() {
-    const gameGrid = cardsArray
-        .sort(() => 0.5 - Math.random());
+    const gameGrid = cardsArray;
+        //.sort(() => 0.5 - Math.random());
 
     const game = document.getElementById('game');
     const grid = document.createElement('section');
@@ -74,7 +79,7 @@ function initGame() {
 
         const card = document.createElement('div');
         card.dataset.name = name;
-        card.dataset.revealed = revealed;
+        card.dataset.played = revealed;
 
         card.classList.add('card');
 
@@ -102,8 +107,8 @@ function initGame() {
         let foundOne;
         let elements = document.getElementsByClassName('card');
         Array.prototype.forEach.call(elements, element => {
-            if (!foundOne && element.dataset.revealed === 'false') {
-                element.dataset.revealed = 'true';
+            if (!foundOne && element.dataset.played === 'false') {
+                element.dataset.played = 'true';
                 element.classList.add('selected');
                 foundOne = true;
             }
