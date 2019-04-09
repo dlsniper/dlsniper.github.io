@@ -3,92 +3,86 @@ const wordsArray1 = [
         'id': '1',
         'name': 'Buch',
         'img': 'img/Buch.png',
+        'positioned': false,
     },
     {
         'id': '2',
         'name': 'Federtasche',
         'img': 'img/Federtasche.png',
+        'positioned': false,
     },
     {
         'id': '3',
         'name': 'Lineal',
         'img': 'img/Lineal.png',
+        'positioned': false,
     },
     {
         'id': '4',
         'name': 'Pinsel',
         'img': 'img/Pinsel.png',
+        'positioned': false,
     },
     {
         'id': '5',
         'name': 'Arbeitsheft',
         'img': 'img/Arbeitsheft.png',
+        'positioned': false,
     },
     {
         'id': '6',
         'name': 'Radiergummi',
         'img': 'img/Radiergummi.png',
+        'positioned': false,
     },
-];
-const wordsArray2 = [
     {
-        'id': '1',
+        'id': '7',
         'name': 'Fussball',
         'img': 'img/Fussball.jpg',
+        'positioned': false,
     },
     {
-        'id': '2',
+        'id': '8',
         'name': 'Fuchs',
         'img': 'img/Fuchs.jpg',
+        'positioned': false,
     },
     {
-        'id': '3',
+        'id': '9',
         'name': 'Tischlampe',
         'img': 'img/Tischlampe.jpg',
+        'positioned': false,
     },
     {
-        'id': '4',
+        'id': '10',
         'name': 'Hellroter',
         'img': 'img/Hellroter.jpg',
+        'positioned': false,
     },
     {
-        'id': '5',
+        'id': '11',
         'name': 'Goldie-Welpe',
         'img': 'img/Goldie-Welpe.jpg',
+        'positioned': false,
     },
     {
-        'id': '6',
+        'id': '12',
         'name': 'Raupe-Nimmersatt',
         'img': 'img/Raupe-Nimmersatt.jpg',
+        'positioned': false,
     },
 ];
-
-function resetFailDrop() {
-    let elements = document.getElementsByClassName('card');
-    Array.prototype.forEach.call(elements, element => {
-        if (element.dataset.matched === 'true') {
-            return;
-        }
-
-        element.classList.remove('fail-drop');
-    });
-}
 
 function initGame() {
     const gameGrid1 = wordsArray1
         .sort(() => 0.5 - Math.random());
-    const gameGrid2 = wordsArray2
-        .sort(() => 0.5 - Math.random());
 
     const game = document.getElementById('game');
     const grid1 = document.createElement('section');
-    grid1.setAttribute('class', 'grid grid1');
+    grid1.setAttribute('class', 'grid');
     game.appendChild(grid1);
 
-    const grid2 = document.createElement('section');
-    grid2.setAttribute('class', 'grid grid2');
-    game.appendChild(grid2);
-
+    let idx = 0;
     gameGrid1.forEach(item => {
         const {id, name, img} = item;
 
@@ -105,46 +99,14 @@ function initGame() {
 
         grid1.appendChild(card);
         card.appendChild(front);
-    });
 
-    gameGrid2.forEach(item => {
-        const {id, name, img} = item;
-
-        const card = document.createElement('div');
-        card.dataset.id = id;
-        card.dataset.name = name;
-        card.dataset.matched = 'false';
-
-        card.classList.add('card');
-        card.classList.add('droppable');
-
-        const front = document.createElement('div');
-        front.classList.add('front');
-        front.style.backgroundImage = `url(${img})`;
-
-        grid2.appendChild(card);
-        card.appendChild(front);
+        idx++;
     });
 
     $(function () {
         // noinspection JSValidateTypes
         $(".draggable").draggable();
-        // noinspection JSUnusedGlobalSymbols
-        $(".droppable").droppable({
-            drop: function (event, ui) {
-                const from = ui.draggable[0];
-                const to = event.target;
-
-                if (from.dataset.id === to.dataset.id) {
-                    to.classList.add('ok-drop');
-                    to.dataset.matched = 'true';
-                    resetFailDrop()
-                } else {
-                    resetFailDrop()
-                    to.classList.add('fail-drop');
-                }
-            }
-        });
+        $(".draggable2").draggable();
     });
 }
 

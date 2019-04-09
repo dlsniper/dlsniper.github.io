@@ -55,26 +55,6 @@ const wordsArray = [{
 
 ];
 
-const sleep = (milliseconds) => {
-    if (milliseconds === 0) {
-        return new Promise(() => {
-            return true
-        });
-    }
-    return new Promise(resolve => setTimeout(resolve, milliseconds))
-};
-
-const myPlayer = document.getElementById('player');
-
-function playClaps(clapNumbers) {
-    for (let i = 0; i < clapNumbers; i++) {
-        sleep(i * 1000 + 10).then(() => {
-            myPlayer.play();
-        });
-
-    }
-}
-
 function initGame() {
     const gameGrid = wordsArray
         .sort(() => 0.5 - Math.random());
@@ -93,38 +73,19 @@ function initGame() {
         card.dataset.syllables = syllables;
 
         card.classList.add('card');
+        card.classList.add('draggable');
 
         const front = document.createElement('div');
         front.classList.add('front');
-
-        const back = document.createElement('div');
-        back.classList.add('back');
-        back.style.backgroundImage = `url(${img})`;
+        front.style.backgroundImage = `url(${img})`;
 
         grid.appendChild(card);
         card.appendChild(front);
-        card.appendChild(back);
     });
 
-    const backpack = document.createElement('div');
-    backpack.classList.add('backpack');
-
-    const front = document.createElement('div');
-    front.classList.add('front-backpack');
-
-    grid.appendChild(backpack);
-    backpack.appendChild(front);
-    backpack.addEventListener('click', () => {
-        let foundOne;
-        let elements = document.getElementsByClassName('card');
-        Array.prototype.forEach.call(elements, element => {
-            if (!foundOne && element.dataset.revealed === 'false') {
-                element.dataset.revealed = 'true';
-                playClaps(element.dataset.syllables);
-                element.classList.add('selected');
-                foundOne = true;
-            }
-        });
+    $(function () {
+        // noinspection JSValidateTypes
+        $(".draggable").draggable();
     });
 }
 

@@ -10,11 +10,22 @@ body {
 }
 
 .grid {
-    max-width: 960px;
+    max-width: 50%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    float: left;
+}
+
+.grid1 {
+    float: left;
+    padding-left: 0%;
+}
+
+.grid2 {
+    float: right;
+    padding-left: 0%;
 }
 
 .card {
@@ -25,46 +36,34 @@ body {
 }
 
 .card,
-.back,
 .front {
     height: 170px;
     width: 170px;
 }
 
-.back-backpack,
-.front-backpack {
-    height: 370px;
-    width: 370px;
-}
-
-.back,
 .front {
     position: absolute;
     backface-visibility: hidden;
-}
-
-.front {
     z-index: 2;
-    background: #FAB942 url('img/question.gif') no-repeat center center / contain;
+    background: transparent url('img/ghiozdan.png') no-repeat center center / contain;
 }
 
-.front-backpack {
-    z-index: 2;
-    background: #6589F9 url('img/ghiozdan.png') no-repeat center center / contain;
-}
-
-.back {
-    transform: rotateY(180deg);
-    background-color: #6589F9;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.selected {
-    transform: rotateY(180deg);
+.draggable {
+    z-index: 10;
 }
 
 .match .front {
     background: #6589F9 !important;
+}
+
+.tabelu {
+    border: white solid;
+}
+
+.tabeluth,
+.tabelutd {
+    border: white solid;
+    font-size: 10em;
+    padding-left: 50px;
+    padding-right: 50px;
 }
