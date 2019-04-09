@@ -1,73 +1,74 @@
-const cardsArray = [{
-    'revealed': false,
-    'name': 'shell',
-    'img': 'img/Anspitzer.png',
-},
+const cardsArray = [
     {
         'revealed': false,
-        'name': 'star',
+        'name': 'Anspitzer',
+        'img': 'img/Anspitzer.png',
+    },
+    {
+        'revealed': false,
+        'name': 'Arbeitsheft',
         'img': 'img/Arbeitsheft.png',
     },
     {
         'revealed': false,
-        'name': 'bobomb',
+        'name': 'Bleistift',
         'img': 'img/Bleistift.png',
     },
     {
         'revealed': false,
-        'name': 'mario',
-        'img': 'img/Schere.png',
-    },
-    {
-        'revealed': false,
-        'name': 'luigi',
+        'name': 'Buch',
         'img': 'img/Buch.png',
     },
     {
         'revealed': false,
-        'name': 'peach',
+        'name': 'Buntstifte',
         'img': 'img/Buntstifte.png',
     },
     {
         'revealed': false,
-        'name': '1up',
+        'name': 'Federtasche',
         'img': 'img/Federtasche.png',
     },
     {
         'revealed': false,
-        'name': 'mushroom',
+        'name': 'Filzstifte',
         'img': 'img/Filzstifte.png',
     },
     {
         'revealed': false,
-        'name': 'thwomp',
+        'name': 'Fuller',
         'img': 'img/Fuller.png',
     },
     {
         'revealed': false,
-        'name': 'bulletbill',
+        'name': 'Kleber',
         'img': 'img/Kleber.png',
     },
     {
         'revealed': false,
-        'name': 'coin',
+        'name': 'Lineal',
         'img': 'img/Lineal.png',
     },
     {
         'revealed': false,
-        'name': 'goomba',
+        'name': 'Pinsel',
         'img': 'img/Pinsel.png',
     },
     {
         'revealed': false,
-        'name': 'goomba',
+        'name': 'Radiergummi',
         'img': 'img/Radiergummi.png',
+    },
+    {
+        'revealed': false,
+        'name': 'Schere',
+        'img': 'img/Schere.png',
     },
 ];
 
 function initGame() {
-    const gameGrid = cardsArray;
-        //.sort(() => 0.5 - Math.random());
+    const gameGrid = cardsArray
+        .sort(() => 0.5 - Math.random());
 
     const game = document.getElementById('game');
     const grid = document.createElement('section');

@@ -1,75 +1,58 @@
 const wordsArray = [{
     'played': false,
-    'syllables': 3,
-    'name': 'shell',
-    'img': 'img/blueshell.png',
+    'syllables':2,
+    'name': 'Bleistift',
+    'img': 'img/Bleistift.png',
 },
     {
         'played': false,
-        'syllables': 1,
-        'name': 'star',
-        'img': 'img/star.png',
-    },
-    {
-        'played': false,
         'syllables': 2,
-        'name': 'bobomb',
-        'img': 'img/bobomb.png',
+        'name': 'Spitzer',
+        'img': 'img/Anspitzer.png',
     },
     {
         'played': false,
-        'syllables': 4,
-        'name': 'mario',
-        'img': 'img/mario.png',
+        'syllables': 1,
+        'name': 'Heft',
+        'img': 'img/Arbeitsheft.png',
+    },
+    {
+        'played': false,
+        'syllables': 1,
+        'name': 'Buch',
+        'img': 'img/Buch.png',
     },
     {
         'played': false,
         'syllables': 3,
-        'name': 'luigi',
-        'img': 'img/luigi.png',
-    },
-    {
-        'played': false,
-        'syllables': 1,
-        'name': 'peach',
-        'img': 'img/peach.png',
-    },
-    {
-        'played': false,
-        'syllables': 2,
-        'name': '1up',
-        'img': 'img/1up.png',
+        'name': 'Buntstifte',
+        'img': 'img/Buntstifte.png',
     },
     {
         'played': false,
         'syllables': 4,
-        'name': 'mushroom',
-        'img': 'img/mushroom.png',
-    },
-    {
-        'played': false,
-        'syllables': 1,
-        'name': 'thwomp',
-        'img': 'img/thwomp.png',
-    },
-    {
-        'played': false,
-        'syllables': 4,
-        'name': 'bulletbill',
-        'img': 'img/bulletbill.png',
-    },
-    {
-        'played': false,
-        'syllables': 2,
-        'name': 'coin',
-        'img': 'img/coin.png',
+        'name': 'Federkasten',
+        'img': 'img/Federtasche.png',
     },
     {
         'played': false,
         'syllables': 3,
-        'name': 'goomba',
-        'img': 'img/goomba.png',
+        'name': 'Filzstifte',
+        'img': 'Filzstifte.png',
     },
+    {
+        'played': false,
+        'syllables': 3,
+        'name': 'Lineal',
+        'img': 'img/Lineal.png',
+    },
+    {
+        'played': false,
+        'syllables': 4,
+        'name': 'Radiergummi',
+        'img': 'img/Radiergummi.png',
+    }
+
 ];
 
 const sleep = (milliseconds) => {
