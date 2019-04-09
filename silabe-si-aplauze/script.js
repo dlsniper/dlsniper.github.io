@@ -1,53 +1,53 @@
 const wordsArray = [{
-    'played': false,
+    'revealed': false,
     'syllables':2,
     'name': 'Bleistift',
     'img': 'img/Bleistift.png',
 },
     {
-        'played': false,
+        'revealed': false,
         'syllables': 2,
         'name': 'Spitzer',
         'img': 'img/Anspitzer.png',
     },
     {
-        'played': false,
+        'revealed': false,
         'syllables': 1,
         'name': 'Heft',
         'img': 'img/Arbeitsheft.png',
     },
     {
-        'played': false,
+        'revealed': false,
         'syllables': 1,
         'name': 'Buch',
         'img': 'img/Buch.png',
     },
     {
-        'played': false,
+        'revealed': false,
         'syllables': 3,
         'name': 'Buntstifte',
         'img': 'img/Buntstifte.png',
     },
     {
-        'played': false,
+        'revealed': false,
         'syllables': 4,
-        'name': 'Federkasten',
+        'name': 'Federtasche',
         'img': 'img/Federtasche.png',
     },
     {
-        'played': false,
+        'revealed': false,
         'syllables': 3,
         'name': 'Filzstifte',
-        'img': 'Filzstifte.png',
+        'img': 'img/Filzstifte.png',
     },
     {
-        'played': false,
+        'revealed': false,
         'syllables': 3,
         'name': 'Lineal',
         'img': 'img/Lineal.png',
     },
     {
-        'played': false,
+        'revealed': false,
         'syllables': 4,
         'name': 'Radiergummi',
         'img': 'img/Radiergummi.png',
@@ -68,7 +68,7 @@ const myPlayer = document.getElementById('player');
 
 function playClaps(clapNumbers) {
     for (let i = 0; i < clapNumbers; i++) {
-        sleep(i * 1000).then(() => {
+        sleep(i * 1000 + 10).then(() => {
             myPlayer.play();
         });
 
