@@ -1,9 +1,10 @@
-const wordsArray = [{
-    'revealed': false,
-    'syllables':2,
-    'name': 'Bleistift',
-    'img': '/img/Bleistift.png',
-},
+const wordsArray = [
+    {
+        'revealed': false,
+        'syllables': 2,
+        'name': 'Bleistift',
+        'img': '/img/Bleistift.png',
+    },
     {
         'revealed': false,
         'syllables': 2,
@@ -59,10 +60,7 @@ function initGame() {
     const gameGrid = wordsArray
         .sort(() => 0.5 - Math.random());
 
-    const game = document.getElementById('game');
-    const grid = document.createElement('section');
-    grid.setAttribute('class', 'grid');
-    game.appendChild(grid);
+    const grid = document.getElementsByClassName('grid1')[0];
 
     gameGrid.forEach(item => {
         const {revealed, name, img, syllables} = item;
