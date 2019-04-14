@@ -2,67 +2,67 @@ const cardsArray = [
     {
         'revealed': false,
         'name': 'Anspitzer',
-        'img': 'img/Anspitzer.png',
+        'img': '/img/Anspitzer.png',
     },
     {
         'revealed': false,
         'name': 'Arbeitsheft',
-        'img': 'img/Arbeitsheft.png',
+        'img': '/img/Arbeitsheft.png',
     },
     {
         'revealed': false,
         'name': 'Bleistift',
-        'img': 'img/Bleistift.png',
+        'img': '/img/Bleistift.png',
     },
     {
         'revealed': false,
         'name': 'Buch',
-        'img': 'img/Buch.png',
+        'img': '/img/Buch.png',
     },
     {
         'revealed': false,
         'name': 'Buntstifte',
-        'img': 'img/Buntstifte.png',
+        'img': '/img/Buntstifte.png',
     },
     {
         'revealed': false,
         'name': 'Federtasche',
-        'img': 'img/Federtasche.png',
+        'img': '/img/Federtasche.png',
     },
     {
         'revealed': false,
         'name': 'Filzstifte',
-        'img': 'img/Filzstifte.png',
+        'img': '/img/Filzstifte.png',
     },
     {
         'revealed': false,
         'name': 'Fuller',
-        'img': 'img/Fuller.png',
+        'img': '/img/Fuller.png',
     },
     {
         'revealed': false,
         'name': 'Kleber',
-        'img': 'img/Kleber.png',
+        'img': '/img/Kleber.png',
     },
     {
         'revealed': false,
         'name': 'Lineal',
-        'img': 'img/Lineal.png',
+        'img': '/img/Lineal.png',
     },
     {
         'revealed': false,
         'name': 'Pinsel',
-        'img': 'img/Pinsel.png',
+        'img': '/img/Pinsel.png',
     },
     {
         'revealed': false,
         'name': 'Radiergummi',
-        'img': 'img/Radiergummi.png',
+        'img': '/img/Radiergummi.png',
     },
     {
         'revealed': false,
         'name': 'Schere',
-        'img': 'img/Schere.png',
+        'img': '/img/Schere.png',
     },
 ];
 

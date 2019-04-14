@@ -45,12 +45,12 @@ body {
 
 .front {
     z-index: 2;
-    background: #FAB942 url('img/question.gif') no-repeat center center / contain;
+    background: #FAB942 url('/img/question.gif') no-repeat center center / contain;
 }
 
 .front-backpack {
     z-index: 2;
-    background: #6589F9 url('img/ghiozdan.png') no-repeat center center / contain;
+    background: #6589F9 url('/img/ghiozdan.png') no-repeat center center / contain;
 }
 
 .back {

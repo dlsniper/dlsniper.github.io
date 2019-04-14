@@ -20,12 +20,14 @@ body {
 
 .grid1 {
     float: left;
-    padding-left: 0%;
+    padding-left: 0;
 }
 
 .grid2 {
     float: right;
-    padding-left: 0%;
+    padding-left: 0;
+    width: 50%;
+    height: 750px;
 }
 
 .card {
@@ -45,22 +47,27 @@ body {
     position: absolute;
     backface-visibility: hidden;
     z-index: 2;
-    background: transparent url('/img/ghiozdan.png') no-repeat center center / contain;
+    background: transparent no-repeat center center / contain;
 }
 
 .draggable {
     z-index: 10;
 }
 
-.match .front {
-    background: #6589F9 !important;
+.wrapper .row {
+    font-size: 0;
+    text-align: center;
 }
 
-.tabeluth,
-.divu {
+.wrapper .row * {
+    font-size:14px;
+}
+
+.wrapper .block {
+    text-align: center;
+    display: inline-block;
+    height: 170px;
+    margin: 5px;
+    width: 170px;
     border: white solid;
-    font-size: 10em;
-    color: white;
-    padding-left: 50px;
-    padding-right: 50px;
 }
